@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css/css2?family=Roboto:wght@300;400;500;600');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+}
+/*Navber*/
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+     font-size: 35px;
+     line-height: 80px;
+     padding:0 100px;
+     font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px  ;
+    text-transform: uppercase;
+}
+
+a.active, a:hover{
+    content: '';
+ background: rgb(17, 187, 31);
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px ;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 858) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+.hero{
+     background-image: url(images/sagani.jpg);
+    height: 200px;
+    font-size: 20px;
+    margin: 0;
+    color:white;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    
+}
+
+.hero h3{
+    font-size: 30px;
+    margin: 0;
+    color: rgb(248, 221, 17);
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+
+
+}
+
+
+
+
+
+.blog-section{
+    width: 100%;
+}
+
+.blog-section .section-content{
+    width: 85%;
+    margin: 20px auto;
+
+}
+
+.blog-section .section-content .title{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+
+}
+
+.blog-section .section-content .title h2{
+    font-size: 40px;
+    color:red ;
+    text-transform: uppercase;
+
+}
+
+.blog-section .section-content .title p{
+    font-size: 18px;
+    color:rgb(0, 0, 0) ;
+    margin: 20px;
+}
+
+.blog-section .section-content .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+
+}
+
+.blog-section .section-content .cards .card{
+   width: 100%;
+   background-color: #f7f7f7;
+   position: relative;
+    
+}
+
+.blog-section .section-content .cards .card img{
+   width: 100%;
+   height: auto;    
+}
+
+.blog-section .section-content .cards .card .article{
+    padding: 15px 20px;
+}
+
+.blog-section .section-content .cards .card .article h4{
+font-size: 24px;
+color: #4a4a4a;
+}
+
+
+.blog-section .section-content .cards .card .article p{
+    font-size: 16px;
+    margin: 20px 0px;
+    color: #6a6a6a;
+    }
+
+.blog-section .section-content .cards .card a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #253dc5;
+    padding: 8px 15px;
+    margin-left: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.blog-section .section-content .cards .card .posted-date p{
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: #253dc5;
+    padding: 6px 15px;
+
+}
+
+@media screen and (max-width: 992px){
+    .blog-section .section-content .cards{
+        grid-template-columns: repeat(2, 1fr);
+   
+    
+    }
+}
+
+@media screen and (max-width: 768px){
+    .blog-section .section-content .cards{
+        grid-template-columns: 1fr;
+   
+    
+    }
+
+}
+
+
+
+.image-flt-l {
+    float: left;
+    width: 500px;
+    height: auto;
+    border: 20px solid rgb(206, 0, 0);
+    padding: 20px;
+    margin: 5px;
+}
